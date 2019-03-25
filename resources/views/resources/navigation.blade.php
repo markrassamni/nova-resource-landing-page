@@ -18,25 +18,43 @@
                     @if (! $resource::$displayInNavigation)
                         @continue
                     @endif
-
                     <li class="leading-tight mb-4 ml-8 text-sm">
-                        @if ($resource::singleRecord())
+                        @if ($resource::detail())
                             <router-link :to="{
-                            name: 'detail',
-                            params: {
-                                resourceName: '{{ $resource::uriKey() }}',
-                                resourceId: {{ $resource::singleRecordId() }}
-                            }
-                        }" class="text-white text-justify no-underline dim">
+                                name: 'detail',
+                                params: {
+                                    resourceName: '{{ $resource::uriKey() }}',
+                                    resourceId: {{ $resource::recordId() }}
+                                }
+                            }" class="text-white text-justify no-underline dim">
+                                {{ $resource::label() }}
+                            </router-link>
+                        @elseif ($resource::create())
+                            <router-link :to="{
+                                name: 'create',
+                                params: {
+                                    resourceName: '{{ $resource::uriKey() }}',
+                                }
+                            }" class="text-white text-justify no-underline dim">
+                                {{ $resource::label() }}
+                            </router-link>
+                        @elseif ($resource::edit())
+                            <router-link :to="{
+                                name: 'edit',
+                                params: {
+                                    resourceName: '{{ $resource::uriKey() }}',
+                                    resourceId: {{ $resource::recordId() }}
+                                }
+                            }" class="text-white text-justify no-underline dim">
                                 {{ $resource::label() }}
                             </router-link>
                         @else
                             <router-link :to="{
-                            name: 'index',
-                            params: {
-                                resourceName: '{{ $resource::uriKey() }}'
-                            }
-                        }" class="text-white text-justify no-underline dim">
+                                name: 'index',
+                                params: {
+                                    resourceName: '{{ $resource::uriKey() }}'
+                                }
+                            }" class="text-white text-justify no-underline dim">
                                 {{ $resource::label() }}
                             </router-link>
                         @endif

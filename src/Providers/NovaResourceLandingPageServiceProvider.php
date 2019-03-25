@@ -1,10 +1,10 @@
 <?php
 
-namespace DanielDeWit\NovaSingleRecordResource\Providers;
+namespace MarkRassamni\NovaResourceLandingPage\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class NovaSingleRecordResourceServiceProvider extends ServiceProvider
+class NovaResourceLandingPageServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {

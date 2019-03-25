@@ -1,20 +1,12 @@
 {
-    "name": "daniel-de-wit/nova-single-record-resource",
-    "description": "Laravel Nova Single Record Resource. Shows a link in the navigation bar directly to the only record of the resource",
+    "name": "markrassamni/nova-resource-landing-page",
+    "description": "Decide if a resource should open on the index, create, update, or detail page",
     "keywords": [
-        "Laravel",
-        "Nova"
+        "laravel",
+        "nova"
     ],
-    "homepage": "https://github.com/daniel-de-wit/nova-single-record-resource",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Daniël de Wit",
-            "email": "daniel@danieldewit.nl",
-            "homepage": "https://github.com/daniel-de-wit",
-            "role": "Maintainer"
-        }
-    ],
+    "homepage": "https://github.com/markrassamni/nova-resource-landing-page",
+    "type": "library",
     "require": {
         "php": ">=7.1.0"
     },
@@ -22,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DanielDeWit\\NovaSingleRecordResource\\": "src"
+            "MarkRassamni\\NovaResourceLandingPage\\": "src"
         }
     },
     "autoload-dev": {
@@ -31,10 +23,17 @@
     },
     "scripts": {
     },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark",
+            "email": "markrassamni@me.com"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [
-                "DanielDeWit\\NovaSingleRecordResource\\Providers\\NovaSingleRecordResourceServiceProvider"
+                "MarkRassamni\\NovaResourceLandingPage\\Providers\\NovaResourceLandingPageServiceProvider"
             ]
         }
     },
