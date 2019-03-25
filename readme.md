@@ -1,7 +1,7 @@
 # Laravel Nova: Resource Landing Page
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://packagist.org/packages/markrassamni/nova-resource-landing-page)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/daniel-de-wit/nova-single-record-resource.svg?style=flat-square)](https://packagist.org/packages/markrassamni/nova-resource-landing-page)
-[![Total Downloads](https://img.shields.io/packagist/dt/daniel-de-wit/nova-single-record-resource.svg?style=flat-square)](https://packagist.org/packages/markrassamni/nova-resource-landing-page)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/markrassamni/nova-resource-landing-page.svg?style=flat-square)](https://packagist.org/packages/markrassamni/nova-resource-landing-page)
+[![Total Downloads](https://img.shields.io/packagist/dt/markrassamni/nova-resource-landing-page.svg?style=flat-square)](https://packagist.org/packages/markrassamni/nova-resource-landing-page)
 
 Adds the ability to create a navigation link directly to the detail, create, or edit page of a resource.
 
