@@ -14,7 +14,7 @@ Adds the ability to create a navigation link directly to the detail, create, or 
 ## Installation
 
 ```
-$ composer require markrassamni/nova-resource-landing-pag
+$ composer require markrassamni/nova-resource-landing-page
 ```
 
 Modify `app/Nova/Resource.php` to implement `ResourceLandingPageInterface` and the `SupportChangeResourceLandingPage` trait:
