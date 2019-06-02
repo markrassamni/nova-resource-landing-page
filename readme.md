@@ -24,8 +24,8 @@ Modify `app/Nova/Resource.php` to implement `ResourceLandingPageInterface` and t
 
 namespace App\Nova;
 
-use MarkRassamni\NovaResourceLandingPage\Contracts\SupportChangeResourceLandingPage;
-use MarkRassamni\NovaResourceLandingPage\Traits\ResourceLandingPageInterface;
+use MarkRassamni\NovaResourceLandingPage\Traits\SupportChangeResourceLandingPage;
+use MarkRassamni\NovaResourceLandingPage\Contracts\ResourceLandingPageInterface;
 use Laravel\Nova\Resource as NovaResource;
 
 abstract class Resource extends NovaResource implements ResourceLandingPageInterface
