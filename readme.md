@@ -127,14 +127,14 @@ class MyResource extends Resource
 ## How it works
 
 Laravel Nova has the ability to override the Blade template used to render the navigation sidebar.
-The template is copied from Nova version v1.2.0 and altered with a few lines to support linking a resource directly to the detail view.
+The template is copied from Nova version v3.4.1 and altered with a few lines to support linking a resource directly to the detail view.
 When publishing vendor assets with the tag `nova-views` the template will be placed in the project `resources/views/vendor/nova/resources` folder.
 
 <details>
 <summary>View changes</summary>
 
 ```php
-@if (method_exists($resource,'detail') && $resource::detail())
+@if ($resource::detail())
     <router-link :to="{
         name: 'detail',
         params: {
@@ -144,7 +144,7 @@ When publishing vendor assets with the tag `nova-views` the template will be pla
     }" class="text-white text-justify no-underline dim">
         {{ $resource::label() }}
     </router-link>
-@elseif (method_exists($resource,'create') && $resource::create())
+@elseif ($resource::create())
     <router-link :to="{
         name: 'create',
         params: {
@@ -153,7 +153,7 @@ When publishing vendor assets with the tag `nova-views` the template will be pla
     }" class="text-white text-justify no-underline dim">
         {{ $resource::label() }}
     </router-link>
-@elseif (method_exists($resource,'edit') && $resource::edit())
+@elseif ($resource::edit())
     <router-link :to="{
         name: 'edit',
         params: {
