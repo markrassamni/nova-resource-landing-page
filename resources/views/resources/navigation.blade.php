@@ -19,7 +19,7 @@
                         @continue
                     @endif
                     <li class="leading-tight mb-4 ml-8 text-sm">
-                        @if ($resource::detail())
+                        @if (method_exists($resource,'detail') && $resource::detail())
                             <router-link :to="{
                                 name: 'detail',
                                 params: {
@@ -29,7 +29,7 @@
                             }" class="text-white text-justify no-underline dim">
                                 {{ $resource::label() }}
                             </router-link>
-                        @elseif ($resource::create())
+                        @elseif (method_exists($resource,'create') && $resource::create())
                             <router-link :to="{
                                 name: 'create',
                                 params: {
@@ -38,7 +38,7 @@
                             }" class="text-white text-justify no-underline dim">
                                 {{ $resource::label() }}
                             </router-link>
-                        @elseif ($resource::edit())
+                        @elseif (method_exists($resource,'edit') && $resource::edit())
                             <router-link :to="{
                                 name: 'edit',
                                 params: {

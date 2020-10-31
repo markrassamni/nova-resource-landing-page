@@ -134,7 +134,7 @@ When publishing vendor assets with the tag `nova-views` the template will be pla
 <summary>View changes</summary>
 
 ```php
-@if ($resource::detail())
+@if (method_exists($resource,'detail') && $resource::detail())
     <router-link :to="{
         name: 'detail',
         params: {
@@ -144,7 +144,7 @@ When publishing vendor assets with the tag `nova-views` the template will be pla
     }" class="text-white text-justify no-underline dim">
         {{ $resource::label() }}
     </router-link>
-@elseif ($resource::create())
+@elseif (method_exists($resource,'create') && $resource::create())
     <router-link :to="{
         name: 'create',
         params: {
@@ -153,7 +153,7 @@ When publishing vendor assets with the tag `nova-views` the template will be pla
     }" class="text-white text-justify no-underline dim">
         {{ $resource::label() }}
     </router-link>
-@elseif ($resource::edit())
+@elseif (method_exists($resource,'edit') && $resource::edit())
     <router-link :to="{
         name: 'edit',
         params: {
